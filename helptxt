@@ -1,0 +1,13 @@
+yarn init -y
+
+yarn add express
+
+yarn add typescript ts-node-dev -D
+
+yarn tsc --init (criar ts config e mudar para ES2017)
+
+yarn add @types/express -D  (tipagem)
+
+--------------------------------------------
+https://sequelize.org/master/manual/migrations.html
+

@@ -1,0 +1,9 @@
+DELIMITER $$ 
+DROP FUNCTION IF EXISTS f_numero_format$$ 
+/*A função recebe 2 parâmetros o Valor a ser convertido y a quantidade de casas decimais*/ 
+CREATE FUNCTION `f_numero_format`
+(numero decimal(18,2), decimals int(1)) 
+RETURNS varchar(20) CHARSET utf8 NO SQL BEGIN declare vs_retorno varchar(20); 
+set vs_retorno = REPLACE( REPLACE (REPLACE (FORMAT (numero, decimals), ".", "@"), ",", "."), "@", ","); return vs_retorno; 
+END
+$$ DELIMITER ;
