@@ -11,6 +11,7 @@ const password = config[env].password
 export const db = new Sequelize(server, username, password, {
   dialect: config[env].dialect,
   port: config[env].port,
+  host: config[env].host
 });
 
 db.authenticate()
